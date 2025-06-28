@@ -12,22 +12,22 @@ const contactMethods = [
     icon: Mail,
     title: "Email Us",
     description: "Get in touch via email",
-    value: "hello@kkdevops.com",
-    color: "from-blue-400 to-cyan-500"
+    value: "hello@techforge.pro",
+    color: "from-emerald-400 to-teal-500"
   },
   {
     icon: Phone,
     title: "Call Us",
     description: "Speak with our experts",
-    value: "+1 (555) 123-4567",
-    color: "from-emerald-400 to-teal-500"
+    value: "+1 (555) 987-6543",
+    color: "from-teal-400 to-emerald-500"
   },
   {
     icon: MapPin,
     title: "Visit Us",
     description: "Our headquarters",
-    value: "San Francisco, CA",
-    color: "from-purple-400 to-pink-500"
+    value: "Austin, TX",
+    color: "from-amber-400 to-orange-500"
   }
 ];
 
@@ -49,8 +49,8 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message Sent Successfully! 🚀",
-      description: "Thank you for your inquiry. Our team will get back to you within 24 hours.",
+      title: "Message sent successfully! 🚀",
+      description: "Thank you for reaching out. Our team will respond within 24 hours.",
     });
     setFormData({ name: "", email: "", company: "", message: "" });
   };
@@ -63,28 +63,28 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0 opacity-50" style={{
-        backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.05'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"
       }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-2 mb-6">
-            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
-            <span className="text-sm font-medium text-slate-400 tracking-wider uppercase">Get In Touch</span>
-            <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-emerald-400 animate-pulse" />
+            <span className="text-sm font-semibold text-slate-400 tracking-widest uppercase">Get In Touch</span>
+            <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Let's Start Your Project
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight font-sans">
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-amber-500 bg-clip-text text-transparent">
+              Start Your Innovation Journey
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your infrastructure? Connect with our experts and discover 
-            how we can accelerate your development journey.
+            Ready to revolutionize your infrastructure? Connect with our technology experts and discover 
+            how we can accelerate your digital transformation.
           </p>
         </div>
 
@@ -94,7 +94,7 @@ export function Contact() {
               <CardHeader>
                 <CardTitle className="text-white text-2xl font-bold flex items-center gap-3">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur opacity-75"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-xl blur opacity-75"></div>
                     <div className="relative p-2 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
                       <Send className="w-5 h-5 text-white" />
                     </div>
@@ -111,7 +111,7 @@ export function Contact() {
                         placeholder="Your Name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="bg-white/5 backdrop-blur-md border-white/20 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-xl h-12"
+                        className="bg-white/5 backdrop-blur-md border-white/20 text-white placeholder:text-slate-400 focus:border-emerald-400 focus:ring-emerald-400/20 rounded-xl h-12"
                         required
                       />
                     </div>
@@ -122,7 +122,7 @@ export function Contact() {
                         placeholder="Your Email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="bg-white/5 backdrop-blur-md border-white/20 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-xl h-12"
+                        className="bg-white/5 backdrop-blur-md border-white/20 text-white placeholder:text-slate-400 focus:border-emerald-400 focus:ring-emerald-400/20 rounded-xl h-12"
                         required
                       />
                     </div>
@@ -133,7 +133,7 @@ export function Contact() {
                       placeholder="Company Name (Optional)"
                       value={formData.company}
                       onChange={handleChange}
-                      className="bg-white/5 backdrop-blur-md border-white/20 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-xl h-12"
+                      className="bg-white/5 backdrop-blur-md border-white/20 text-white placeholder:text-slate-400 focus:border-emerald-400 focus:ring-emerald-400/20 rounded-xl h-12"
                     />
                   </div>
                   <div>
@@ -143,14 +143,14 @@ export function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="bg-white/5 backdrop-blur-md border-white/20 text-white placeholder:text-slate-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-xl resize-none"
+                      className="bg-white/5 backdrop-blur-md border-white/20 text-white placeholder:text-slate-400 focus:border-emerald-400 focus:ring-emerald-400/20 rounded-xl resize-none"
                       required
                     />
                   </div>
                   <Button 
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
+                    className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
                   >
                     <span className="flex items-center justify-center gap-2">
                       Send Message
@@ -177,7 +177,7 @@ export function Contact() {
                     <div>
                       <h3 className="text-white font-semibold mb-1">{method.title}</h3>
                       <p className="text-slate-400 text-sm mb-1">{method.description}</p>
-                      <p className="text-cyan-300 font-medium">{method.value}</p>
+                      <p className="text-emerald-300 font-medium">{method.value}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -185,16 +185,16 @@ export function Contact() {
             ))}
             
             {/* Quick actions */}
-            <Card className="bg-gradient-to-br from-cyan-500/10 to-purple-500/10 backdrop-blur-md border border-white/10">
+            <Card className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-md border border-white/10">
               <CardContent className="p-6">
                 <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
-                  <Zap className="w-5 h-5 text-cyan-400" />
+                  <Zap className="w-5 h-5 text-emerald-400" />
                   Quick Actions
                 </h3>
                 <div className="space-y-3">
                   {quickActions.map((action, index) => (
                     <div key={index} className="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-300 cursor-pointer group">
-                      <action.icon className="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                      <action.icon className="w-4 h-4 text-slate-400 group-hover:text-emerald-400 transition-colors" />
                       <div>
                         <p className="text-white text-sm font-medium">{action.title}</p>
                         <p className="text-slate-400 text-xs">{action.description}</p>

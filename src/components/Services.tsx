@@ -5,72 +5,72 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const services = [
   {
     icon: Cloud,
-    title: "Cloud Infrastructure",
-    description: "Scalable cloud solutions on AWS, Azure, and Google Cloud Platform with automated deployment pipelines and cost optimization.",
-    color: "from-blue-400 to-cyan-500",
-    bgColor: "from-blue-500/10 to-cyan-500/10"
-  },
-  {
-    icon: GitBranch,
-    title: "CI/CD Pipelines",
-    description: "Streamlined continuous integration and deployment workflows that reduce time-to-market by 70% with zero-downtime deployments.",
+    title: "Cloud Architecture",
+    description: "Enterprise-grade cloud solutions with multi-region deployment, auto-scaling, and intelligent cost optimization across all major platforms.",
     color: "from-emerald-400 to-teal-500",
     bgColor: "from-emerald-500/10 to-teal-500/10"
   },
   {
+    icon: GitBranch,
+    title: "DevOps Automation",
+    description: "Advanced CI/CD pipelines with automated testing, deployment strategies, and infrastructure as code for seamless development workflows.",
+    color: "from-teal-400 to-emerald-500",
+    bgColor: "from-teal-500/10 to-emerald-500/10"
+  },
+  {
     icon: Monitor,
-    title: "Monitoring & Observability",
-    description: "Real-time monitoring, logging, and alerting systems with AI-powered anomaly detection and predictive analytics.",
-    color: "from-purple-400 to-pink-500",
-    bgColor: "from-purple-500/10 to-pink-500/10"
+    title: "Performance Monitoring",
+    description: "Comprehensive observability platform with real-time metrics, distributed tracing, and AI-powered anomaly detection systems.",
+    color: "from-amber-400 to-orange-500",
+    bgColor: "from-amber-500/10 to-orange-500/10"
   },
   {
     icon: Shield,
-    title: "Security & Compliance",
-    description: "Implement security best practices, vulnerability scanning, and compliance frameworks with automated security testing.",
-    color: "from-red-400 to-orange-500",
-    bgColor: "from-red-500/10 to-orange-500/10"
+    title: "Security Operations",
+    description: "Zero-trust security architecture with automated vulnerability scanning, compliance monitoring, and incident response protocols.",
+    color: "from-orange-400 to-red-500",
+    bgColor: "from-orange-500/10 to-red-500/10"
   },
   {
     icon: Cpu,
-    title: "Container Orchestration",
-    description: "Docker and Kubernetes solutions for efficient application deployment, auto-scaling, and microservices architecture.",
-    color: "from-orange-400 to-yellow-500",
-    bgColor: "from-orange-500/10 to-yellow-500/10"
+    title: "Container Platform",
+    description: "Kubernetes-native solutions with service mesh, progressive deployments, and intelligent resource management for optimal performance.",
+    color: "from-red-400 to-pink-500",
+    bgColor: "from-red-500/10 to-pink-500/10"
   },
   {
     icon: Database,
-    title: "Database Management",
-    description: "Automated database deployments, backups, performance optimization, and multi-region disaster recovery strategies.",
-    color: "from-cyan-400 to-blue-500",
-    bgColor: "from-cyan-500/10 to-blue-500/10"
+    title: "Data Engineering",
+    description: "Modern data pipelines with real-time processing, automated backups, and cross-region disaster recovery for mission-critical applications.",
+    color: "from-pink-400 to-purple-500",
+    bgColor: "from-pink-500/10 to-purple-500/10"
   }
 ];
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="services" className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0 opacity-30" style={{
-        backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M50 50c0-27.614-22.386-50-50-50s-50 22.386-50 50 22.386 50 50 50 50-22.386 50-50zm0 0c0-27.614 22.386-50 50-50s50 22.386 50 50-22.386 50-50 50-50-22.386-50-50z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-27.614-22.386-50-50-50s-50 22.386-50 50 22.386 50 50 50 50-22.386 50-50zm0 0c0-27.614 22.386-50 50-50s50 22.386 50 50-22.386 50-50 50-50-22.386-50-50z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"
       }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-2 mb-6">
-            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
-            <span className="text-sm font-medium text-slate-400 tracking-wider uppercase">Our Expertise</span>
-            <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-emerald-400 animate-pulse" />
+            <span className="text-sm font-semibold text-slate-400 tracking-widest uppercase">Our Solutions</span>
+            <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Professional Services
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight font-sans">
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-amber-500 bg-clip-text text-transparent">
+              Enterprise Solutions
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive DevOps solutions designed to accelerate your development lifecycle 
-            and scale your business to new heights
+            Comprehensive technology solutions engineered to transform your business operations 
+            and drive unprecedented growth in today's digital landscape
           </p>
         </div>
         
@@ -93,7 +93,7 @@ export function Services() {
                   </div>
                   <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
                 </div>
-                <CardTitle className="text-white text-xl font-bold group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-500 group-hover:bg-clip-text transition-all duration-300">
+                <CardTitle className="text-white text-xl font-bold group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-teal-500 group-hover:bg-clip-text transition-all duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
@@ -108,10 +108,10 @@ export function Services() {
         
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-slate-400 mb-6">Ready to transform your infrastructure?</p>
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-md rounded-2xl border border-white/10">
-            <span className="text-white font-medium">Let's discuss your project</span>
-            <ArrowRight className="w-4 h-4 text-cyan-400" />
+          <p className="text-slate-400 mb-6">Ready to modernize your infrastructure?</p>
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 backdrop-blur-md rounded-2xl border border-white/10">
+            <span className="text-white font-medium">Schedule a consultation</span>
+            <ArrowRight className="w-4 h-4 text-emerald-400" />
           </div>
         </div>
       </div>
