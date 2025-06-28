@@ -1,69 +1,125 @@
 
-import { CheckCircle, Users, Award, Target } from "lucide-react";
+import { CheckCircle, Users, Award, Target, Sparkles, TrendingUp, Clock, Shield } from "lucide-react";
 
 const stats = [
-  { number: "500+", label: "Projects Delivered" },
-  { number: "99.9%", label: "Uptime Achieved" },
-  { number: "150+", label: "Happy Clients" },
-  { number: "24/7", label: "Support Available" }
+  { number: "500+", label: "Projects Delivered", icon: TrendingUp },
+  { number: "99.9%", label: "Uptime Achieved", icon: Shield },
+  { number: "150+", label: "Happy Clients", icon: Users },
+  { number: "24/7", label: "Support Available", icon: Clock }
 ];
 
 const achievements = [
-  "AWS Certified Solutions Architect",
-  "Kubernetes Certified Administrator", 
-  "Azure DevOps Expert",
-  "Google Cloud Professional"
+  "AWS Certified Solutions Architect Professional",
+  "Kubernetes Certified Administrator (CKA)", 
+  "Azure DevOps Expert & Solutions Architect",
+  "Google Cloud Professional Cloud Architect"
+];
+
+const highlights = [
+  { icon: Users, title: "Expert Team", description: "Certified professionals with 10+ years experience" },
+  { icon: Award, title: "Industry Recognition", description: "Award-winning solutions and best practices" },
+  { icon: Target, title: "Results Driven", description: "Measurable outcomes and continuous improvement" }
 ];
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="about" className="py-24 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-cyan-400/10 to-purple-600/10 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-pink-400/10 to-orange-600/10 rounded-full blur-2xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              About Our Professional Team
+            <div className="flex items-center gap-2 mb-6">
+              <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
+              <span className="text-sm font-medium text-slate-400 tracking-wider uppercase">About Us</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
+              Meet Our
+              <span className="block bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Expert Team
+              </span>
             </h2>
+            
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
               With over a decade of experience in DevOps and cloud infrastructure, 
               we've helped hundreds of companies streamline their development processes 
-              and achieve remarkable operational efficiency.
+              and achieve remarkable operational efficiency through cutting-edge automation 
+              and innovative cloud solutions.
             </p>
             
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-10">
               {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                  <span className="text-slate-300">{achievement}</span>
+                <div key={index} className="flex items-center space-x-3 group">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                    <div className="relative p-1 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                      <CheckCircle className="w-4 h-4 text-emerald-300" />
+                    </div>
+                  </div>
+                  <span className="text-slate-300 group-hover:text-white transition-colors duration-300">{achievement}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex space-x-8">
-              <div className="text-center">
-                <Users className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white">Expert Team</div>
-              </div>
-              <div className="text-center">
-                <Award className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white">Certified Pros</div>
-              </div>
-              <div className="text-center">
-                <Target className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white">Results Driven</div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {highlights.map((highlight, index) => (
+                <div key={index} className="group text-center">
+                  <div className="relative mb-4 inline-block">
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                    <div className="relative p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 group-hover:bg-white/15 transition-all duration-300">
+                      <highlight.icon className="w-6 h-6 text-white mx-auto" />
+                    </div>
+                  </div>
+                  <h3 className="text-white font-bold mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-500 group-hover:bg-clip-text transition-all duration-300">
+                    {highlight.title}
+                  </h3>
+                  <p className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
+                    {highlight.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
           
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-6">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6 bg-slate-800 rounded-lg border border-slate-700">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">
-                  {stat.number}
+              <div key={index} className="group relative overflow-hidden">
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Card content */}
+                <div className="relative p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 text-center">
+                  <div className="relative mb-4 inline-block">
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                    <div className="relative p-2 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
+                      <stat.icon className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  
+                  <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {stat.number}
+                  </div>
+                  <div className="text-slate-300 font-medium group-hover:text-white transition-colors duration-300">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-slate-300">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+        
+        {/* Trust indicators */}
+        <div className="mt-20 text-center">
+          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-md rounded-2xl border border-white/10">
+            <div className="flex -space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full border-2 border-white/20"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full border-2 border-white/20"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-orange-500 rounded-full border-2 border-white/20"></div>
+            </div>
+            <span className="text-white font-medium">Trusted by leading companies worldwide</span>
           </div>
         </div>
       </div>
