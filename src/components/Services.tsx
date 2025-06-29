@@ -1,5 +1,5 @@
 
-import { GitBranch, Container, Monitor, CloudCheck } from "lucide-react";
+import { GitBranch, Container, Monitor, CloudCog } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const services = [
@@ -22,7 +22,7 @@ const services = [
     color: "from-cyan-500 to-teal-600"
   },
   {
-    icon: CloudCheck,
+    icon: CloudCog,
     title: "Cloud Compliance",
     description: "Implement security and compliance best practices in AWS, Azure, and GCP environments.",
     color: "from-teal-500 to-green-600"
